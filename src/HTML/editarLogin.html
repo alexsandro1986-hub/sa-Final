@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style/Cadastros.css">
+    <script src="https://kit.fontawesome.com/36fe515f95.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="container-editar">
+        <!-- Primeiro conteúdo - Login -->
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem-vindo!</h2> <br>
+
+                <div id="username-atual">
+
+                </div>
+
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Edite os seus dados!</h2>
+
+
+                <form class="form">
+                    <!-- Campo de entrada para o nome -->
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Nome" id="signup-username">
+                    </label>
+
+                    <!-- Campo de entrada para o email -->
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email" id="signup-email">
+                    </label>
+
+                    <!-- Campo de entrada para a senha -->
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Password" id="signup-password">
+                        <span id="toggle-password-btn" onclick="togglePasswordVisibility()">
+                            <i class="fa fa-eye-slash" style="color: #9e8a8a;" id="password-icon"></i>
+                        </span>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Confirm Password" id="signup-confirmPassword">
+                        <span id="toggle-confirmPassword-btn" onclick="toggleConfirmPasswordVisibility()">
+                            <i class="fa fa-eye-slash" style="color: #9e8a8a;" id="confirmPassword-icon"></i>
+                        </span>
+                    </label>
+
+
+
+                    <!-- Botão de registro -->
+                    <button onclick="editar()" type="submit" class="btn btn-second">Editar</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+
+
+    </div><!-- container -->>
+    <script src="login.js"></script>
+</body>
+</html>

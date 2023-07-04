@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/cadastroBarco(1).css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div-container">
+        <h1>Ilha Nautica</h1>
+        <main class="logo"><img src="/src/assets/imagens/cadastro-barcos/bbb.png"></main>
+        <section class="secao-inpt">
+            <div class="categoria">
+                <label for="" class="text"> Categoria da embarcação</label>
+                <input type="text" required class="noob" placeholder="Selecione qual a categoria da sua embarcação"
+                    id="inptCategoria" list="categoria">
+                <datalist id="categoria">
+                    <option value=""></option>
+                    <option value="Jet-Ski"></option>
+                    <option value="Veleiro"></option>
+                    <option value="Catamara"></option>
+                    <option value="lancha"> </option>
+                    <option value="Iate"> </option>
+                </datalist>
+            </div>
+            <div class="fabricante">
+                <div class="a">
+                    <label for="">Fabricante</label>
+                    <input type="text" required="required" placeholder="Nome" id="inptFabricante">
+                </div>
+                <div class="b">
+                    <label for="">Ano de fabricação</label>
+                    <input type="date" required="required" id="inptAno">
+                </div>
+
+                <div class="c">
+                    <label for="">Tamanho(pés)</label>
+                    <input type="text" required="required" placeholder="Categoria" id="inpttamanho">
+                </div>
+
+            </div>
+            <div class="maxpessoas">
+                <label for="">Capacidade maxima de passageiros</label>
+                <input type="text" placeholder="Capacidadede passageiros" id="inptpassageiros" >
+               
+
+                <label for="">Per noite </label>
+                <input type="text" placeholder="Per noite" id="inptpernoite" list="pernoite">
+                <datalist id="pernoite">
+                    <option value=""></option>
+                    <option value="Sim"></option>
+                    <option value="Não"></option>
+                   
+                </datalist>
+            </div>
+
+            <div class="animais">
+                <label for="">Aceita animais de estimação</label>
+                <input type="text" placeholder="Aceita animais" id="inptanimais" list="animais">
+                <datalist id="animais">
+                    <option value=""></option>
+                    <option value="Sim"></option>
+                    <option value="Não"></option>
+
+                </datalist>
+
+                <label for="">Email</label>
+                <input type="email" placeholder="email"  id="inptemail" >
+                
+
+                <label for="">Senha</label>
+                <input type="number" placeholder="cadeira" id="inptSenha" >
+              
+            </div>
+
+            <div class="banheiro">
+                <label for="">Quantidade de banheiro</label>
+                <input type="text" placeholder="Quantidade de banheiros" id="inptBanheiros" list="banheiro">
+                <datalist id="banheiro">
+                    <option value=""></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+
+                </datalist>
+
+                <label for="">Quantidade de cabines</label>
+                <input type="text" placeholder="Quantidade de cabines" id="inptCabines" list="cabines">
+                <datalist id="cabines">
+                    <option value=""></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+
+                </datalist>
+            </div>
+            <div class="embarque">
+                <label for="">Endereço de embarque</label>
+                <input type="text" placeholder="Endereço de embarque" id="inptEmbarque" list="estado">
+              
+                <label for="">Estado</label>
+                <input type="text" placeholder="Estado" required="required" id="inptEstado" list="estado">
+               
+
+                <label for="">Cidade</label>
+                <input type="text" placeholder="Cidade" id="inptCidade" list="cidade">
+                
+            </div>
+
+            <section class="botao">
+                <button onclick="cadastrar()">Cadastrar</button>
+                
+            </section>
+
+        </section>
+        <div id="divResultado">
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+
+    <script src="/src/js/cadastro-barcos.js"></script>
+</body>
+
+</html>

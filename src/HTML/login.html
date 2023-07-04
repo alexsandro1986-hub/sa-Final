@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <script src="https://kit.fontawesome.com/36fe515f95.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style/Cadastros.css">
+    <script src="/src/js/login.js"></script>
+</head>
+<body>
+    <div class="container-login">
+        <!-- Primeiro conteúdo - Login -->
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem-vindo!</h2> <br>
+                <button id="signin" class="btn btn-primary">Login</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Criar nova conta</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <!-- Ícones das redes sociais -->
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-facebook fa-bounce" style="color: #015cf9;"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-google fa-bounce" style="color: #015cf9;"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-linkedin fa-bounce" style="color: #035efc;"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">Ou use o seu email para cadastrar</p>
+                <form class="form">
+                    <!-- Campo de entrada para o nome -->
+                    <label class="label-input" for="Nome">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Nome" id="signup-username">
+                    </label>
+
+                    <!-- Campo de entrada para o email -->
+                    <label class="label-input" for="Email">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email" id="signup-email">
+                    </label>
+
+                    <!-- Campo de entrada para a senha -->
+                    <label class="label-input" for="Senha">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha" id="signup-password">
+                        <span id="toggle-password-btn" onclick="togglePasswordVisibility()">
+                            <i class="fa fa-eye-slash" style="color: #9e8a8a;" id="password-icon"></i>
+                        </span>
+                    </label>
+
+                    <label class="label-input" for="Confirmar senha">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Confirmar senha" id="signup-confirmPassword">
+                        <span id="toggle-confirmPassword-btn" onclick="toggleConfirmPasswordVisibility()">
+                            <i class="fa fa-eye-slash" style="color: #9e8a8a;" id="confirmPassword-icon"></i>
+                        </span>
+                    </label>
+
+
+
+                    <!-- Botão de registro -->
+                    <button onclick="registrar()" type="submit" class="btn btn-second">sign up</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+
+        <!-- Segundo conteúdo - Registro -->
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Olá!</h2><br>
+                <p class="description description-primary">Entre com os seus dados pessoais</p>
+                <button id="signup" class="btn btn-primary">sign up</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Bem-vindo!</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <!-- Ícones das redes sociais -->
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-facebook fa-bounce" style="color: #015cf9;"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-google fa-bounce" style="color: #015cf9;"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-linkedin fa-bounce" style="color: #035efc;"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">Use o seu username para acessar</p>
+                <form class="form">
+                    <!-- Campo de entrada para o username -->
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Username" id="login-username">
+                    </label>
+
+                    <!-- Campo de entrada para a senha -->
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Password" id="login-password">
+                        <span id="toggle-password-btn-signin" onclick="togglePasswordVisibilitySignIn()">
+                            <i class="fa fa-eye-slash" style="color: #9e8a8a;" id="password-icon-signin"></i>
+                        </span>
+                    </label>
+
+
+                    <!-- Link para redefinir a senha -->
+                    <a class="password" href="#">Esqueceu a sua senha?</a>
+                    <!-- Botão de login -->
+                    <button onclick="logar()" type="submit" class="btn btn-second">sign in</button>
+
+                </form>
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div><!-- container -->
+    <script src="login.js"></script>
+</body>
+</html>
