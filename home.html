@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/home.css">
+    <script src="https://kit.fontawesome.com/4d527ab0dc.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- ================ HEADER ============= -->
+    <header>
+        <div id="cabeca">
+            <a href="/home.html">
+                <div id="logo"><span id="spanLogo">ILHA NÁUTICA</span></div>
+            </a>
+            <div id="barra-pesquisa">
+                <input type="text" name="pesquisa" id="pesquisa" placeholder="Para onde você deseja ir?">
+            </div>
+
+            <div id="botao-perfil-div">
+                <button id="botao-perfil">
+                    <img id="menu_profile" src="/src/assets/icon/menu.png">
+                    <img id="marinheiro_profile" src="/src/assets/icon/captain.png">
+                </button>
+                <div id="menu">
+                    <div id="menu-dropdown">
+                        <li> <a href="#">Entrar | Cadastrar </a> </li>
+                        <li><a href="#"> Editar perfil </a> </li>
+                        <li><a href="/src/HTML/Cadastro-Skipper.html"> Anuncie seu barco </a> </li>
+                        <li> <a href="#">Ajuda </a> </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <div id="icons">
+
+
+                <a href="/src/HTML/Jet-ski/jetski.html"><button class="btn_icons"><img class="icons_filter"
+                            src="/src/assets/icon/jet-ski.png">Jet ski</button></a>
+                <a href="/src/HTML/Iate/iate.html"><button class="btn_icons"><img class="icons_filter"
+                            src="/src/assets/icon/iate (1).png">Iates</button></a>
+                <a href="/src/HTML/Lanchas/lancha.html"><button class="btn_icons"><img class="icons_filter"
+                            src="/src/assets/icon/lancha-rapida.png">Lanchas</button></a>
+                <a href="/src/HTML/Veleiro/veleiro.html"><button class="btn_icons"><img class="icons_filter"
+                            src="/src/assets/icon/iate.png">Veleiros</button></a>
+
+            </div>
+
+        </nav>
+    </header>
+    <!-- ==================== FIM HEADER ============ -->
+    <main>
+     
+           
+
+                <div class="carrossel" id="slideshow-example" data-component="slideshow">
+                    <div role="list">
+                      <div class="slide">
+                        <img src="src/assets/imagens/slider/slide5 (1).jpg" alt="">
+                      </div>
+                      <div class="slide">
+                        <img src="src/assets/imagens/slider/slide6 (1).jpg" alt="">
+                      </div>
+                      <div class="slide">
+                        <img src="src/assets/imagens/slider/slide7 (1).jpg" alt="">
+                      </div>
+                    </div>
+                  
+
+
+
+
+        <!-- =============== CONTAINER BANNER =========== -->
+        <!-- <div id="container-banner">
+
+            <div id="cima">
+                <div id="img-divulgacao-propaganda">
+                    <img src="src/assets/imagens/BANNER/floripa-ponte.jfif" alt="">
+                </div>
+                <div class="texto-divulgacao-propaganda">
+                    <span> Venha viver momentos inesquecíveis pelo litoral catarinense!
+                        A escolha certa para uma experiência única no mar!
+                        Cadastre-se no Ilha Nautica agora e aproveite o que temos de melhor!
+                    </span>
+                </div>
+            </div>
+            <div id="meio">
+                <div id="img-divulgacao-sobre">
+                    <img src="src/assets/imagens/BANNER/TEXTO-IMGS-SA-HOME/campeche-island.jpg" alt="">
+
+                </div>
+                <div id="texto-divulgacao-sobre">
+                    <span>
+                        O Ilha Nautica é um site destinado para ajudar pessoas a procura de experiências unicas em
+                        passeios maritimos, oferecendo uma grande variedade de oportunidades, tanto para quem deseja
+                        curtir suas férias, aniversário ou qualquer comemoração ou quem deseja ganhar um dinheiro com
+                        sua embarcação.
+                        Sempre tentando da melhor maneira, conectar clientes e anfitriões através de uma plataforma
+                        rápida e prática, a anunciar, descobrir e reservar passeios em diversos tipos de embarcações.
+                    </span>
+
+                </div>
+
+            </div>
+            <div id="baixo">
+
+                <div id="img-divulgacao-grupo">
+                    <img src="src/assets/imagens/BANNER/TEXTO-IMGS-SA-HOME/Praias-de-Florianópolis-que-tem-águas-quentes.jpg"
+                        alt="">
+
+                </div>
+                <div id="texto-divulgacao-grupo">
+                    <span>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit veniam voluptatem
+                        excepturi quisquam. Consequatur quisquam voluptatibus quasi amet. Doloribus incidunt, explicabo
+                        at voluptatum itaque quae odio eos! Quibusdam, iste voluptatum.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div> -->
+        <!-- =============== FIM CONTAINER BANNER =========== -->
+
+
+        <!-- ================= CONTAINER CADASTRO SKIPPER ============ -->
+        <div id="container-skipper" class="bg-img">
+            <h2 class="title" id="skipper-titulo">Cadastre-se como Skipper </h2>
+            <!-- <main class="logo-skipper"><img src="/src/assets/imagens/SKIPPER/bbb.png"></main> -->
+            <section class="secao-inpt">
+                <input type="number" placeholder="N°- Inscrição" class="skipper" id="inptNumeroInscricao">
+                <input type="text" placeholder="Nome" class="skipper" id="inptNome">
+
+                <input type="text" placeholder="Telefone" required="required" class="skipper" id="inptTel">
+
+                <input type="text" placeholder="Categoria" id="inptopicao" list="faixa">
+                <datalist id="faixa">
+                    <option value=""></option>
+                    <option value="Mestre Amador"></option>
+                    <option value="Capitão"></option>
+                    <option value="Comandante"> </option>
+                </datalist>
+
+                <input type="email" placeholder="Email" id="inptemail">
+                <input type="password" placeholder="Senha" id="inptSenha">
+                <input type="password" placeholder="Confirmar senha" class="skipper" id="inptSenhaConfirma">
+                <div id="inptSexo">
+                    <label for="Masculino">Masculino<input type="radio" name="sexo" value="M"></label>
+                    <label for="Feminino">Feminino<input type="radio" name="sexo" value="F"></label>
+                </div>
+                <input type="date" id="inptdata" class="skipper">
+                <div id="botao-skipper">
+                    <button class="btn" onclick="cadastrar()">Cadastrar</button>
+                    <button class="btn" onclick="Limpar()">Já tenho conta</button>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- ========== FIM CONTAINER SKIPPER ===== -->
+
+
+
+    </main>
+
+    <!-- ======= FOOTER  ======= -->
+    <footer id="footer">
+
+        <div class="container-footer">
+
+            <h3>Ilha Náutica</h3>
+            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi
+                placeat.</p>
+
+            <div class="social-links">
+
+                <a href="#" class="facebook"><i class="fa-brands fa-facebook fa-beat-fade"></i></i></a>
+                <a href="#" class="twitter"><i class="fa-brands fa-twitter fa-beat-fade"></i></a>
+                <a href="#" class="instagram"><i class="fa-brands fa-instagram fa-beat-fade"></i></a>
+                <a href="#" class="google-plus"><i class="fa-brands fa-google fa-beat-fade"></i></a>
+                <a href="#" class="linkedin"><i class="fa-brands fa-linkedin fa-beat-fade"></i></a>
+            </div>
+
+            <div class="copyright">
+
+                &copy; Copyright <strong><span>2023-2023. Ilha Náutica</span></strong>. Todos os direitos reservados
+            </div>
+        </div>
+
+    </footer>
+    <!-- ======= FIM FOOTER ======= -->
+
+    <!-- ========= CONTAINER POPUPS ========= -->
+    <div id="containerPopup">
+        <div class="fundoPopup">
+            <!-- Popup do login e cadastro -->
+            <iframe src="/src/HTML/login.html" id="iframe_login" name="iframe_login" title="Iframe Login"></iframe>
+
+        </div>
+    </div>
+    <div id="containerPopupEditar">
+        <div class="fundoPopupEditar">
+            <iframe src="/src/HTML/editarLogin.html" id="iframe_editar" name="iframe_editar"
+                title="Iframe Login"></iframe>
+        </div>
+    </div>
+    <!-- ================ FIM POPUPS =========== -->
+
+
+
+
+
+    <script src="src/js/script.js"></script>
+    <script src="src/js/loginAtual.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+@import url('/style/home.css');
+@import url('/style/Cadastros.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+main {
+    top: 170px;
+    width: 98%;
+    height: 1600px; 
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 2%;
+    /* margin-right: 30px;  */
+    /* background-color: rgb(255, 255, 255); */
+    background-color: transparent;
+
+
+}
+.container-barcos {
+    width: 100%;
+    background-color: transparent;
+}
+
+
+section {
+    
+    display: grid;
+    /* Comprimento das imagens */
+    grid-template-columns: 31% 31% 31%;
+    /*Espaçamento colunas */
+    column-gap: 2.5%;
+
+    /* Altura das imagens */
+    grid-template-rows: 30% 30% 30%;
+    /* Espaçamento linhas */
+    row-gap: 3%;
+}
+
+[id^='barco'] {
+    border: none;
+    background-color: transparent;
+
+
+}
+
+/* --------------HOVER CARD ------------- */
+[id^='barco']:hover {
+    cursor: pointer;
+    border: 0.2px solid transparent;
+    border-radius: 10px;
+    scale: 1.1;
+    background-color: #a9eaf1;
+
+}
+
+/* --------------------------- */
+
+.img_div {
+    height: 70%;
+}
+
+.img_barcos {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+
+.info-text {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    padding: 0%;
+
+
+}
+
+.span_LocalBarco {
+    /* font-family:; */
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.span_ModeloBarco {
+    font-size: 18px;
+
+}
+
+.span_DiasBarco {
+    font-size: 18px;
+    color: rgb(108, 107, 107);
+}
+
+.preco_div {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    margin-top: 4px;
+
+}
+
+.span_PrecoBarco {
+    font-size: 18px;
+}

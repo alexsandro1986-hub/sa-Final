@@ -1,0 +1,691 @@
+/* @font-face {
+    font-family: 'logo_header';
+    src: url('sa/src/assets/fonts/Oswald/Oswald-VariableFont_wght.ttf');
+} */
+@import url('/style/Cadastros.css');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+
+header {
+    left: 0;
+    top: 0;
+
+    background-color: white;
+
+    width: 100%;
+    position: fixed;
+    height: 160px;
+    /* Sobrepor todos os conteudos */
+    z-index: 10;
+
+    /* Divindo em duas partes (cabeca e nav) */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    grid-auto-flow: row;
+}
+
+
+#cabeca {
+
+    /* Separacao das divs (logo, pesquisa e botao) */
+    display: grid;
+    grid-template-columns: 25% 1fr 25%;
+    align-items: center;
+
+}
+
+#cabeca a {
+    text-decoration: none;
+}
+
+#logo {
+
+    margin-left: 10%;
+}
+
+#spanLogo {
+    font-family: 'logo_header';
+    font-weight: 900;
+    font-size: 170%;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #10afc4, #055745);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+
+#logo:hover {
+    scale: 1.2;
+    margin-left: 15%;
+
+}
+
+#barra-pesquisa {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pesquisa {
+    border-radius: 20px;
+    font-size: 83%;
+    border: 2px solid black;
+    padding: 2px;
+    height: 40px;
+    width: 25%;
+    box-shadow: 2px 6px 4px rgb(141, 138, 138);
+    transition: 1s;
+}
+
+#pesquisa:hover {
+    width: 50%;
+    font-size: 120%;
+    transition: 0.7s;
+}
+
+#pesquisa:focus {
+    width: 50%;
+    font-size: 120%;
+}
+
+
+#pesquisa::placeholder {
+    text-align: center;
+
+}
+
+#botao-perfil-div {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 12%;
+}
+
+
+#botao-perfil {
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    width: 80px;
+    height: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+#botao-perfil:hover {
+    scale: 1.07;
+    transition: 200ms;
+    box-shadow: 1px 1px 2px 1px rgb(184, 184, 185);
+}
+
+#menu_profile {
+    height: 15px;
+}
+
+#marinheiro_profile {
+    height: 30px;
+}
+
+#menu {
+    display: none;
+    top: 60px;
+    position: absolute;
+
+}
+
+#menu-dropdown {
+    margin-top: 20px;
+    z-index: 10;
+    display: flex;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 90%;
+    box-shadow: 2px 6px 20px 2px rgb(141, 138, 138);
+}
+
+
+#menu-dropdown li {
+    z-index: 10;
+    color: black;
+    list-style: none;
+    display: block;
+    padding: 5px;
+
+
+}
+
+#menu-dropdown li a:hover {
+    text-underline-position: 3px;
+    text-decoration: underline;
+
+}
+
+#menu-dropdown li a {
+
+    z-index: 10;
+    color: black;
+    text-decoration: none;
+    display: block;
+
+}
+
+#botao-perfil-div:hover #menu {
+    display: block;
+}
+
+
+/* div dos icones dos barcos */
+nav {
+
+    box-sizing: border-box;
+    border-top: 2px solid rgb(99, 99, 99);
+    border-bottom: 2px solid rgba(99, 99, 99);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #a9eaf1;
+
+
+}
+
+nav a {
+    color: transparent;
+}
+
+#icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    height: 100%;
+
+}
+
+/* personalizando os icones dos barcos */
+.icons_filter {
+    height: 40px;
+    width: 40px;
+}
+
+.icons_filter:hover {
+    cursor: pointer;
+    animation: updown 10s ease infinite;
+}
+
+/*--------- Animação icons -------- */
+@keyframes updown {
+    0% {
+        transform: translate(15%, 25%);
+        /* transform: translateY(25%); */
+    }
+
+    20% {
+        transform: translate(30%, 5%);
+        /* transform: translateY(5%); */
+    }
+
+    40% {
+        transform: translate(15%, 25%);
+        /* transform: translateY(25%); */
+    }
+
+    60% {
+        transform: translate(15, 5%);
+        /* transform: translateY(5%); */
+    }
+
+    /* 100% {
+      transform: translate(-90%, 25%); */
+    /* transform: translateY(25%); */
+    /* } */
+}
+
+.btn_icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+}
+
+.btn_icons:hover {
+    scale: 1.1;
+    transition: 200ms;
+
+}
+/* -------------------- MAIN -------------- */
+main {
+    
+    width: 95%;
+    height: 1800px;
+    box-sizing: border-box;
+    margin-left: 0%;
+    margin-right: 0%;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: transparent;
+    
+}
+
+
+
+/* ------ CONTAINER BANNER -------- */
+#container-banner {
+
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+    position: absolute;
+    top: 170px;
+    /* Espaço das divs dos barcos; Separacao em 4 blocos(quadrados);*/
+    /* display: flex; */
+    /* Altura das imagens */
+    /* flex-direction: row; */
+    /* Espaçamento linhas */
+    /* flex-wrap: wrap;
+       justify-content: space-evenly; */
+}
+
+#cima {
+    background-color: #007065;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 200px;
+}
+
+#img-divulgacao-propaganda {
+    width: 100%;
+    height: 100%;
+}
+
+#img-divulgacao-propaganda img {
+    width: 100%;
+    height: 100%;
+}
+
+#cima .texto-divulgacao-propaganda {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background-color: white;
+    width: 640px;
+    height: 60px;
+    border: transparent;
+    border-radius: 4px;
+}
+
+
+#cima .texto-divulgacao-propaganda span {
+    position: absolute;
+    font-weight: bold;
+    color: black;
+    white-space: normal;
+    z-index: 1;
+}
+
+
+#meio {
+    background-color: red;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+#meio #img-divulgacao-sobre {
+    width: 50%;
+    height: 400px;
+
+}
+
+#meio #img-divulgacao-sobre img {
+    width: 100%;
+    height: 400px;
+
+}
+
+#meio #texto-divulgacao-sobre {
+    position: relative;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    border: transparent;
+    border-radius: 4px;
+}
+
+#texto-divulgacao-sobre span {
+    width: 100%;
+    font-weight: bold;
+    color: black;
+    white-space: normal;
+    z-index: 1;
+    font-size: 28px;
+    text-align: center;
+    height: 400px;
+}
+
+#baixo {
+    background-color: yellow;
+    width: 100%;
+    height: 25%;
+}
+
+#baixo #texto-divulgacao-grupo {
+    position: relative;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    border: transparent;
+    border-radius: 4px;
+}
+
+#texto-divulgacao-grupo span {
+    width: 100%;
+    font-weight: bold;
+    color: black;
+    white-space: normal;
+    z-index: 1;
+    font-size: 28px;
+    text-align: center;
+    height: 400px;
+}
+
+#baixo #img-divulgacao-grupo {
+    width: 50%;
+    height: 400px;
+
+}
+
+#baixo #img-divulgacao-grupo img {
+    width: 100%;
+    height: 400px;
+
+}
+
+/* -------------FIM CONTAINER BANNER ----------------- */
+/*-----------------------------FOOTER---------------------*/
+
+#footer {
+    position: absolute;
+    top: 2500px;
+    /* bottom: 0;
+       left: 0; */
+    display: flex;
+    width: 100%;
+    /* height: 100px; */
+    background-color: #296bdd;
+
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+
+}
+
+#footer {
+    background: #090909;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#footer h3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+#footer p {
+    font-size: 25px;
+    font-style: italic;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+#footer .social-links {
+    margin: 0 0 15px 0;
+
+}
+
+#footer .social-links a {
+    font-size: 35px;
+    display: inline-block;
+    background: #048df5;
+    color: #fff;
+    line-height: 1;
+    padding: 1px 0;
+    margin-top: 1px;
+    border-radius: 90%;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+    background: #048df5;
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer .copyright {
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+/* ------------ FIM FOOTER -----------------   */
+
+/* --------- CONTAINER POPUPS --------- */
+iframe {
+    width: 100%;
+    height: 1200px;
+    border: none;
+    z-index: 4;
+
+}
+
+
+#containerPopup {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 2000px;
+    z-index: 11;
+    background-color: rgba(15, 15, 15, 0.5);
+    /* background-color: red; */
+    /* backdrop-filter: blur(1px); */
+    /* -webkit-backdrop-filter: blur(12px); */
+}
+
+.fundoPopup {
+    position: fixed;
+    top: 10%;
+    right: 20%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 12;
+    width: 60%;
+    height: 80%;
+
+}
+
+
+#containerPopupEditar {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 2000px;
+    z-index: 11;
+    background-color: rgba(15, 15, 15, 0.5);
+    /* background-color: red; */
+    /* backdrop-filter: blur(1px); */
+    /* -webkit-backdrop-filter: blur(12px); */
+}
+
+.fundoPopupEditar {
+    position: fixed;
+    top: 10%;
+    right: 20%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 12;
+    width: 60%;
+    height: 80%;
+}
+
+.container-editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* background-color: #ecf0f1; */
+    z-index: 20;
+
+}
+
+
+/* ----- CONTAINER IFRAMES ------- */
+/* .container-barcos {
+    position: absolute;
+    top: 170px;
+    width: 96%;
+    background-color: transparent;
+    height: 100%;
+    margin-left: 3%;
+    margin-right: 1%;
+    z-index: 4; */
+    /* Espaço das divs dos barcos; Separacao em 4 blocos(quadrados);*/
+    /* display: flex; */
+    /* Altura das imagens */
+    /* flex-direction: row; */
+    /* Espaçamento linhas */
+    /* flex-wrap: wrap;
+       justify-content: space-evenly; */
+
+/* } */
+
+/* ----------------------------------------- */
+/* ---------- IFRAMES ------- */
+
+/* 
+#jet-skis {
+    display: none;
+}
+
+#iates {
+    display: none;
+}
+
+#lanchas {
+    display: none;
+}
+
+#veleiros {
+    display: none;
+} */
+
+/* --------------- FIM IFRAMES ----------- */
+
+/* ----------- CONTAINER SKIPPER ------------ */
+#container-skipper {
+    display:none;
+}
+
+
+/* slider */
+
+
+.carrossel{
+    position: absolute;
+    top: 200px;
+    width: 90%;
+    height: 70%;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* border: 1px solid red; */
+    /* border-radius: 25px; */
+    /* box-sizing: border-box; */
+   
+
+}
+
+[data-component="slideshow"] .slide {
+    display: none;
+  }
+
+  [data-component="slideshow"] .slide.active {
+    display: block;
+  }
+
+
+.slide {
+
+    width: 100%;
+    height: 100%;
+   
+
+
+
+
+ }
+
+.slide img{
+    width: 100%;
+    height: 632px;
+    border-radius: 17px;
+
+
+
+
+ }
+
+  
